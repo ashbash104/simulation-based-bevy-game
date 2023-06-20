@@ -2,13 +2,19 @@ use bevy::prelude::*;
 use bevy::sprite::SpriteBundle;
 mod worker_ant_struct;
 use worker_ant_struct::WorkerAnt;
-fn main() {
-    /* let worker_ant = WorkerAnt {
-        //name: String::from("Worker Ant"),
-        //sprite: ,
-        position: (0,0),
-        health: 100,
-        inventory: 2,
-        rizz: 5 *\
-    };
+impl WorkerAnt {
+    fn new(base_speed: f32, weight_multiplier: f32, health: u32) -> Self {
+        WorkerAnt {
+            base_speed,
+            weight_multiplier,
+            health,
+        }
+    }
+
+    fn pick_up_food(&mut self) {
+        self.weight_multiplier += 0.1; // Adjust the weight multiplier as needed
+    }
+    fn query_health(&self) -> u32 {
+        self.health
+    }
 }

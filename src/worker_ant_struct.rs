@@ -3,7 +3,9 @@ pub struct WorkerAnt {
     name: String,
     sprite: SpriteBundle,
     position: (f32, f32),
-    health: AntHealth, // or "Health" with bundle?
+    health: AntHealth, 
     inventory: f32,
     rizz: Rizz
+    base_speed: f32,
+    weight_multiplier: f32,
 }
