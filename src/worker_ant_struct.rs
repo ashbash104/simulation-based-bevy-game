@@ -8,4 +8,6 @@ pub struct WorkerAnt {
     rizz: Rizz
     base_speed: f32,
     weight_multiplier: f32,
+    position: Vec2,
+    carrying_food: bool
 }
