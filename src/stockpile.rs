@@ -1,6 +1,5 @@
 use bevy::prelude::*;
 
-
 struct Stockpile {
     food_count: u32,
 }
